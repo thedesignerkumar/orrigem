@@ -3,7 +3,7 @@ var webserver = require('gulp-webserver');
 var compass = require('gulp-compass');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
-var imagemin = require('gulp-imagemin');var gutil = require('gulp-util');
+var imagemin = require('gulp-imagemin');
 
 gulp.task('scripts', function() {
     gulp.src('dev/scripts/**/*.js')

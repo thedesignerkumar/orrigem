@@ -1,0 +1,81 @@
+
+
+/*
+Header styles
+ */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    .logo {
+        width: 18%;
+        padding: 25px;;
+    }
+
+    nav {
+        width: 50%;
+    }
+}
+
+/*
+Main styles
+ */
+main {
+    // home styles
+    #home {
+        margin-top: -3%;
+        #home-top-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            #header-bee {
+                width: 5%;
+                position: relative;
+                left: -25%;
+            }
+        }
+
+        #home-container {
+            display: flex;
+
+            #home-left-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: center;
+                width: 20%;
+                #bird {
+                    width: 30%;
+                    margin-bottom: 40%;
+                }
+                #paper-plane {
+                    width: 30%;
+                    margin-bottom: 10%;
+                }
+            }
+
+            #video-container {
+                width: 60%;
+                video {
+                    width: 100%;
+                }
+            }
+
+            #home-right-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                width: 20%;
+                #rocket {
+                    position: relative;
+                    left: 10%;
+                    top: 25%;
+                    width: 60%;
+                }
+            }
+        }        
+    }
+
+}
+
+
