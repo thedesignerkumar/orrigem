@@ -1,0 +1,24 @@
+
+// clearfix mixin
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+// sreen reader mixin
+@mixin sr {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+// px to em conversion
+@function px2ems($px, $base-font-size: 16) {
+	@return $px/$base-font-size + 'em';
+}

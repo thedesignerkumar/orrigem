@@ -1,0 +1,41 @@
+@import 'https://fonts.googleapis.com/css?family=Lato|Roboto';
+
+$base-font: 'Helvetica','Roboto', sans-serif;
+$alternate-font: 'Helvetica Neue', 'Lato', sans-serif;
+
+
+// define color variables
+$green: #AFCBCD;
+$blue: #3F7188;
+$lightblue: #73A5B7;
+$lightwhite: #D0E4E5;
+$white: #FFFFFF;
+$yellow: #FFD923;
+
+// susy settings
+$susy: (
+  flow: ltr,
+  math: fluid,
+  output: float,
+  gutter-position: after,
+  container: auto,
+  container-position: center,
+  columns: 12,
+  gutters: .25,
+  column-width: false,
+  global-box-sizing: border-box,
+  last-flow: to,
+  debug: (
+    image: show,
+    color: rgba(#66f, .25),
+    output: overlay,
+    toggle: top right,
+  ),
+  use-custom: (
+    background-image: true,
+    background-options: false,
+    box-sizing: true,
+    clearfix: false,
+    rem: true,
+  )
+);
