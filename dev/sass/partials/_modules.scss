@@ -7,3 +7,18 @@ HEADER STYLES
 .logo h1 {
 	@include sr;
 }
+
+#header-bee {
+	z-index: 998;
+}
+
+#paper-plane {
+	z-index: 999;
+}
+
+#about h2,
+#work h2,
+#team h2 {
+	text-transform: uppercase;
+}
+

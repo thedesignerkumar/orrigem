@@ -428,7 +428,7 @@ header nav {
 Main styles
  */
 main #home {
-  margin-top: -3%;
+  margin-top: -2%;
 }
 main #home #home-top-container {
   display: flex;
@@ -436,7 +436,7 @@ main #home #home-top-container {
   align-items: center;
 }
 main #home #home-top-container #header-bee {
-  width: 5%;
+  width: 4%;
   position: relative;
   left: -25%;
 }
@@ -450,10 +450,6 @@ main #home #home-container #home-left-container {
   align-items: center;
   width: 20%;
 }
-main #home #home-container #home-left-container #bird {
-  width: 30%;
-  margin-bottom: 40%;
-}
 main #home #home-container #home-left-container #paper-plane {
   width: 30%;
   margin-bottom: 10%;
@@ -464,17 +460,70 @@ main #home #home-container #video-container {
 main #home #home-container #video-container video {
   width: 100%;
 }
-main #home #home-container #home-right-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  width: 20%;
+main #about h2 {
+  margin-top: 10%;
+  margin-left: 13%;
 }
-main #home #home-container #home-right-container #rocket {
+main #about .about-main {
+  width: 65%;
+  margin: 0px auto;
+  margin-top: -5%;
   position: relative;
-  left: 10%;
-  top: 25%;
-  width: 60%;
+}
+main #about p {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 75px;
+}
+main #work h2 {
+  margin-top: 5%;
+  margin-left: 13%;
+}
+main #work #work-main {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0px auto;
+  margin-top: 5%;
+}
+main #work #work-main .work-main-slide-buttons {
+  margin-top: 15%;
+  width: 35%;
+}
+main #work #work-main .work-main-slide-buttons li {
+  display: block;
+  margin-bottom: 10%;
+  padding-left: 25px;
+  color: #FFFFFF;
+}
+main #work #work-main .work-main-slide-buttons li:nth-child(even) {
+  background: url('../images/work_button_shape_even.svg?1473031858') no-repeat;
+  margin-left: 15%;
+}
+main #work #work-main .work-main-slide-buttons li:nth-child(odd) {
+  background: url('../images/work_button_shape_odd.svg?1473031858') no-repeat;
+}
+main #work #work-main .work-main-slides {
+  position: relative;
+  width: 65%;
+}
+main #work #work-main .work-main-slides img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+main #team h2 {
+  margin-top: 13%;
+  margin-left: 10%;
+}
+main #team #team-main {
+  margin-left: 60%;
+}
+main #team #team-main p .role {
+  display: block;
 }
 
 html {
@@ -489,7 +538,7 @@ html {
 body {
   margin: auto;
   background-color: #AFCBCD;
-  background-image: url('../images/bg.svg?1472330724');
+  background-image: url('../images/background.svg?1473031858');
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "Helvetica", "Roboto", sans-serif;
@@ -523,6 +572,20 @@ HEADER STYLES
   width: 1px;
   height: 1px;
   overflow: hidden;
+}
+
+#header-bee {
+  z-index: 998;
+}
+
+#paper-plane {
+  z-index: 999;
+}
+
+#about h2,
+#work h2,
+#team h2 {
+  text-transform: uppercase;
 }
 
 .logo-outer {
@@ -614,37 +677,21 @@ HEADER STYLES
 }
 
 #header-bee .st0 {
-  fill: #1B1A1F;
+  fill: #1b1a1f;
 }
 #header-bee .st1 {
-  fill: #FFCA26;
+  fill: #ffca26;
 }
 #header-bee .st2 {
-  opacity: 0.4;
-  fill: #FFFFFF;
+  opacity: .4;
+  fill: #fff;
 }
 #header-bee .st3 {
   opacity: 0.5;
-  fill: #FFFFFF;
 }
+#header-bee .st3,
 #header-bee .st4 {
-  fill: #FFFFFF;
-}
-
-#bird .st0 {
   fill: #fff;
-}
-#bird .st0,
-#bird .st1,
-#bird .st2 {
-  fill-rule: evenodd;
-  clip-rule: evenodd;
-}
-#bird .st1 {
-  fill: #72a4b6;
-}
-#bird .st2 {
-  fill: #c0ccca;
 }
 
 #paper-plane .st0,

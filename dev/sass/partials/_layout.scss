@@ -1,5 +1,3 @@
-
-
 /*
 Header styles
  */
@@ -9,73 +7,128 @@ header {
     justify-content: space-between;
     .logo {
         width: 18%;
-        padding: 25px;;
+        padding: 25px;
+        ;
     }
-
     nav {
         width: 50%;
     }
 }
 
+
 /*
 Main styles
  */
+
 main {
     // home styles
     #home {
-        margin-top: -3%;
+        margin-top: -2%;
         #home-top-container {
             display: flex;
             justify-content: center;
             align-items: center;
             #header-bee {
-                width: 5%;
+                width: 4%;
                 position: relative;
                 left: -25%;
             }
         }
-
         #home-container {
             display: flex;
-
             #home-left-container {
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-end;
                 align-items: center;
                 width: 20%;
-                #bird {
-                    width: 30%;
-                    margin-bottom: 40%;
-                }
                 #paper-plane {
                     width: 30%;
                     margin-bottom: 10%;
                 }
             }
-
             #video-container {
                 width: 60%;
                 video {
                     width: 100%;
                 }
             }
+        }
+    }
+    #about {
+        h2 {
+            margin-top: 10%;
+            margin-left: 13%;
+        }
+        .about-main {
+            width: 65%;
+            margin: 0px auto;
+            margin-top: -5%;
+            position: relative;
+        }
+        p {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 0 75px;
+        }
+    }
+    #work{
+        h2 {
+            margin-top: 5%;            
+            margin-left: 13%;
+        }
+        #work-main {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            margin: 0px auto;
+            margin-top: 5%;
+            .work-main-slide-buttons {
+                margin-top: 15%;
+                width: 35%;
+                li {
+                    display: block;
+                    margin-bottom: 10%;
+                    padding-left: 25px;
+                    color: $white;
+                }
+                li:nth-child(even) {
+                    background: image-url("work_button_shape_even.svg") no-repeat;
+                    margin-left: 15%;
+                }
+                li:nth-child(odd) {
+                    background: image-url("work_button_shape_odd.svg") no-repeat;
+                    
+                }
 
-            #home-right-container {
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-end;
-                width: 20%;
-                #rocket {
-                    position: relative;
-                    left: 10%;
-                    top: 25%;
-                    width: 60%;
+            }
+            .work-main-slides {
+                position: relative;
+                width: 65%;
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
                 }
             }
-        }        
+        }
     }
-
+    #team {
+        h2 {
+            margin-top: 13%;
+            margin-left: 10%;
+        }
+        #team-main {
+            margin-left: 60%;
+            p {
+                .role {
+                    display: block;
+                }
+            }
+        }
+        
+    }
 }
-
-
