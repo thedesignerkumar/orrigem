@@ -499,11 +499,11 @@ main #work #work-main .work-main-slide-buttons li {
   color: #FFFFFF;
 }
 main #work #work-main .work-main-slide-buttons li:nth-child(even) {
-  background: url('../images/work_button_shape_even.svg?1473031858') no-repeat;
+  background: url('../images/work_button_shape_even.svg?1473288926') no-repeat;
   margin-left: 15%;
 }
 main #work #work-main .work-main-slide-buttons li:nth-child(odd) {
-  background: url('../images/work_button_shape_odd.svg?1473031858') no-repeat;
+  background: url('../images/work_button_shape_odd.svg?1473288926') no-repeat;
 }
 main #work #work-main .work-main-slides {
   position: relative;
@@ -525,6 +525,67 @@ main #team #team-main {
 main #team #team-main p .role {
   display: block;
 }
+main #testimonial h2 {
+  margin-top: 25%;
+  margin-left: 15%;
+}
+main #testimonial #testimonial-main {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6%;
+}
+main #testimonial #testimonial-main .testimonial-main-left {
+  width: 7%;
+  margin-left: 7%;
+  margin-top: -2%;
+}
+main #testimonial #testimonial-main .testimonial-main-middle {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+}
+main #testimonial #testimonial-main .testimonial-main-middle .testimonial-main-slide {
+  width: 60%;
+  text-align: center;
+  position: relative;
+}
+main #testimonial #testimonial-main .testimonial-main-middle .testimonial-main-slide .testimonial-main-slide-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+main #testimonial #testimonial-main .testimonial-main-middle .testimonial-main-slide p {
+  padding: 15% 15%;
+  z-index: 2;
+}
+main #testimonial #testimonial-main .testimonial-main-middle .testimonial-main-slide-pic {
+  width: 20%;
+  margin-top: 30%;
+}
+main #testimonial #testimonial-main .testimonial-main-middle .testimonial-main-slide-pic img {
+  width: 100%;
+}
+main #testimonial #testimonial-main .testimonial-main-right {
+  width: 10%;
+  margin-top: 10%;
+  margin-right: 10%;
+}
+
+footer {
+  margin-top: 48%;
+  margin-left: 10%;
+  margin-bottom: 4%;
+}
+footer ul {
+  width: 15%;
+  display: flex;
+  justify-content: space-between;
+}
+footer ul img {
+  width: 100%;
+}
 
 html {
   font-size: 100%;
@@ -538,7 +599,7 @@ html {
 body {
   margin: auto;
   background-color: #AFCBCD;
-  background-image: url('../images/background.svg?1473031858');
+  background-image: url('../images/background.svg?1473288926');
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "Helvetica", "Roboto", sans-serif;
@@ -584,7 +645,8 @@ HEADER STYLES
 
 #about h2,
 #work h2,
-#team h2 {
+#team h2,
+#testimonial h2 {
   text-transform: uppercase;
 }
 

@@ -128,7 +128,69 @@ main {
                     display: block;
                 }
             }
+        }        
+    }
+    #testimonial {
+        h2 {
+            margin-top: 25%;
+            margin-left: 15%;
         }
-        
+        #testimonial-main {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 6%;
+            .testimonial-main-left {
+                width: 7%;
+                margin-left: 7%;
+                margin-top: -2%;
+            }
+            .testimonial-main-middle {
+                width: 60%;
+                display: flex;
+                justify-content: center;
+                .testimonial-main-slide {
+                    width: 60%;
+                    text-align: center;
+                    position: relative;
+                    .testimonial-main-slide-bg {
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                    }
+                    p {
+                        padding: 15% 15%;
+                        z-index: 2;
+                    }
+                }
+                .testimonial-main-slide-pic {
+                    width: 20%;
+                    margin-top: 30%;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+            .testimonial-main-right {
+                width: 10%;
+                margin-top: 10%;
+                margin-right: 10%;
+            }
+        }
+    }
+}
+
+footer {
+    margin-top: 48%;
+    margin-left: 10%;
+    margin-bottom: 4%;
+    ul {
+        width: 15%;
+        display: flex;
+        justify-content: space-between;
+        img {
+           width: 100%;
+        }
     }
 }
