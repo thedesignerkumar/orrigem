@@ -1,0 +1,18 @@
+#next_button {
+    .st0 {
+        fill: #545248;
+    }
+    .st1 {
+        fill: #FFD923;
+    }
+    .st2 {
+        fill: darken($blue, 5);
+    }
+    .st3 {
+        font-family: $alternate-font;
+    }
+    .st4 {
+        font-size: 2em;
+    }
+    cursor: pointer;    
+}

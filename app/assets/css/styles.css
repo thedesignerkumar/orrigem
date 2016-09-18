@@ -15,7 +15,7 @@
  * 3. Corrects text resizing oddly in IE 6/7 when body `font-size` is set using
  *  `em` units.
  */
-@import "https://fonts.googleapis.com/css?family=Lato|Roboto";
+@import "https://fonts.googleapis.com/css?family=Handlee|Indie+Flower";
 html {
   font-family: sans-serif;
   /* 1 */
@@ -412,6 +412,10 @@ th {
 /*
 Header styles
  */
+html {
+  position: relative;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -430,15 +434,8 @@ Main styles
 main #home {
   margin-top: -2%;
 }
-main #home #home-top-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 main #home #home-top-container #header-bee {
   width: 4%;
-  position: relative;
-  left: -25%;
 }
 main #home #home-container {
   display: flex;
@@ -499,20 +496,22 @@ main #work #work-main .work-main-slide-buttons li {
   color: #FFFFFF;
 }
 main #work #work-main .work-main-slide-buttons li:nth-child(even) {
-  background: url('../images/work_button_shape_even.svg?1473288926') no-repeat;
+  background: url('../images/work_button_shape_even.svg?1474191925') no-repeat;
   margin-left: 15%;
 }
 main #work #work-main .work-main-slide-buttons li:nth-child(odd) {
-  background: url('../images/work_button_shape_odd.svg?1473288926') no-repeat;
+  background: url('../images/work_button_shape_odd.svg?1474191925') no-repeat;
 }
 main #work #work-main .work-main-slides {
   position: relative;
   width: 65%;
 }
-main #work #work-main .work-main-slides img {
+main #work #work-main .work-main-slides li {
   position: absolute;
   top: 0;
   left: 0;
+}
+main #work #work-main .work-main-slides li img {
   width: 100%;
 }
 main #team h2 {
@@ -538,6 +537,7 @@ main #testimonial #testimonial-main .testimonial-main-left {
   width: 7%;
   margin-left: 7%;
   margin-top: -2%;
+  z-index: 21;
 }
 main #testimonial #testimonial-main .testimonial-main-middle {
   width: 60%;
@@ -545,7 +545,7 @@ main #testimonial #testimonial-main .testimonial-main-middle {
   justify-content: center;
 }
 main #testimonial #testimonial-main .testimonial-main-middle .testimonial-main-slide {
-  width: 60%;
+  width: 65%;
   text-align: center;
   position: relative;
 }
@@ -555,10 +555,14 @@ main #testimonial #testimonial-main .testimonial-main-middle .testimonial-main-s
   position: absolute;
   left: 0;
   top: 0;
+  z-index: 1;
 }
 main #testimonial #testimonial-main .testimonial-main-middle .testimonial-main-slide p {
   padding: 15% 15%;
   z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 main #testimonial #testimonial-main .testimonial-main-middle .testimonial-main-slide-pic {
   width: 20%;
@@ -572,11 +576,18 @@ main #testimonial #testimonial-main .testimonial-main-right {
   margin-top: 10%;
   margin-right: 10%;
 }
+main #bg-pic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  overflow-y: auto;
+}
 
 footer {
-  margin-top: 48%;
+  margin-top: 50%;
   margin-left: 10%;
-  margin-bottom: 4%;
 }
 footer ul {
   width: 15%;
@@ -599,10 +610,8 @@ html {
 body {
   margin: auto;
   background-color: #AFCBCD;
-  background-image: url('../images/background.svg?1473288926');
-  background-repeat: no-repeat;
-  background-size: cover;
-  font-family: "Helvetica", "Roboto", sans-serif;
+  font-family: "Handlee", cursive;
+  color: #2f5465;
 }
 
 ul {
@@ -623,6 +632,10 @@ button {
   background: none;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
 /*
 HEADER STYLES
  */
@@ -633,6 +646,10 @@ HEADER STYLES
   width: 1px;
   height: 1px;
   overflow: hidden;
+}
+
+header nav a {
+  font-weight: bold;
 }
 
 #header-bee {
@@ -648,6 +665,24 @@ HEADER STYLES
 #team h2,
 #testimonial h2 {
   text-transform: uppercase;
+  font-weight: 700;
+  color: #3F7188;
+}
+
+.testimonial-main-slide p {
+  font-family: "Indie Flower", cursive;
+  font-size: 1.1em;
+}
+
+#team #team-main p {
+  font-weight: bold;
+  font-family: "Handlee", cursive;
+  font-size: 1.5em;
+}
+#team #team-main p .role {
+  font-size: 0.5em;
+  color: #4b7f92;
+  line-height: 1.5em;
 }
 
 .logo-outer {
@@ -696,7 +731,7 @@ HEADER STYLES
   fill: #FFFFFF;
 }
 #nav-menu .st8 {
-  font-family: "Helvetica", "Roboto", sans-serif;
+  font-family: "Handlee", cursive;
 }
 #nav-menu .st9 {
   font-size: 100%;
@@ -764,4 +799,101 @@ HEADER STYLES
 }
 #paper-plane .st1 {
   fill: #3e7187;
+}
+
+#about-main-bg .st0 {
+  opacity: 0.4;
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #FFFFFF;
+}
+
+#flying-squirrel .st0 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #598EA9;
+}
+#flying-squirrel .st1 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #395D77;
+}
+#flying-squirrel .st2 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #94B5CD;
+}
+#flying-squirrel .st3 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #395B70;
+}
+#flying-squirrel .st4 {
+  fill: none;
+  stroke: #395B70;
+  stroke-width: 0.2564;
+  stroke-miterlimit: 22.9256;
+}
+#flying-squirrel .st5 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #FFFFFF;
+}
+#flying-squirrel .st6 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #327E9D;
+}
+#flying-squirrel .st7 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #225C72;
+}
+#flying-squirrel .st8 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #378DC8;
+}
+#flying-squirrel .st9 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #5A94C6;
+}
+#flying-squirrel .st10 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #9DC5D1;
+}
+
+#testimonial_shape_bg .st0 {
+  opacity: 0.5;
+  fill: #D0E4E5;
+  stroke: #1A3144;
+  stroke-width: 1.7298;
+  stroke-miterlimit: 22.9256;
+}
+
+#next_button {
+  cursor: pointer;
+}
+#next_button .st0 {
+  fill: #545248;
+}
+#next_button .st1 {
+  fill: #FFD923;
+}
+#next_button .st2 {
+  fill: #376377;
+}
+#next_button .st3 {
+  font-family: "Indie Flower", cursive;
+}
+#next_button .st4 {
+  font-size: 2em;
+}
+
+#pinterest .st0 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #FFFFFF;
 }

@@ -1,7 +1,7 @@
-@import 'https://fonts.googleapis.com/css?family=Lato|Roboto';
+@import 'https://fonts.googleapis.com/css?family=Handlee|Indie+Flower';
 
-$base-font: 'Helvetica','Roboto', sans-serif;
-$alternate-font: 'Helvetica Neue', 'Lato', sans-serif;
+$base-font: 'Handlee', cursive;
+$alternate-font: 'Indie Flower', cursive;
 
 
 // define color variables
@@ -39,3 +39,6 @@ $susy: (
     rem: true,
   )
 );
+
+$bp-mobile: max-width 480px;
+$bp-tablet: max-width 768px;

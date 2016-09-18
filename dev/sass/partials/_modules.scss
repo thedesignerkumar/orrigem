@@ -8,6 +8,14 @@ HEADER STYLES
 	@include sr;
 }
 
+header {
+    nav {
+        a {
+            font-weight: bold;
+        }
+    }
+}
+
 #header-bee {
 	z-index: 998;
 }
@@ -21,5 +29,28 @@ HEADER STYLES
 #team h2,
 #testimonial h2 {
 	text-transform: uppercase;
+    font-weight: 700;    
+    color: $blue;
 }
 
+.testimonial-main-slide {
+    p {
+        font-family: $alternate-font;
+        font-size: 1.1em;
+    }
+}
+
+#team {
+    #team-main {
+        p {
+            font-weight: bold;
+            font-family: $base-font;
+            font-size: 1.5em;
+            .role {
+                font-size: 0.5em;
+                color: darken($lightblue, 15);
+                line-height: 1.5em;
+            }
+        }
+    }
+}
