@@ -176,11 +176,14 @@ $(document).ready(function() {
 
     var flying_squirrel = new TimelineMax();
     flying_squirrel
-        .to("#flying-squirrel", 5, {
+        .to("#flying-squirrel", 10, {
             bezier: {
                 curviness: 1.5,
                 autoRotate: false,
                 values: [{
+                    x: 100,
+                    y: -100
+                }, {
                     x: devWidth / 3,
                     y: devHeight / 2
                 }, {
@@ -213,9 +216,9 @@ $(document).ready(function() {
 
     var header_rocket_animation = new TimelineMax();
     header_rocket_animation
-    .to("#header-rocket", 500, {
+    .to("#header-rocket", 2000, {
         x: -200,
-        y: -500
+        y: -2000
     })
     .from("#header-rocket-thrust-cloud", 1, {
         scaleX: 0,
@@ -261,15 +264,141 @@ $(document).ready(function() {
     .from(".musical-notes-one", 1, {
         opacity: 0
     })
-    .to(".musical-notes-three", 1, {
+    .from(".musical-notes-four", 1, {
         opacity: 0
-    }, 3.5)
-    .to(".musical-notes-two", 1, {
-        opacity: 0
-    }, 3.5)
-    .to(".musical-notes-one", 1, {
-        opacity: 0
-    }, 3.5)
+    });
+
+// about squirrel animation
+
+var about_squirrel = new TimelineMax({repeat: -1, repeatDelay: 3});
+about_squirrel
+.from("#about-squirrel-right-eye", 0.5, {scaleY: 0, transformOrigin: "bottom center"})
+.from("#about-squirrel-left-eye", 0.5, {scaleY: 0, transformOrigin: "bottom center"}, 0);
+
+// work bee animation
+TweenMax.to("#work-bee-left-wing", 0.02, {
+        skewX: -45,
+        transformOrigin: "bottom center",
+        yoyo: true,
+        repeat: -1
+    });
+    TweenMax.to("#work-bee-right-wing", 0.02, {
+        skewX: 45,
+        transformOrigin: "bottom center",
+        yoyo: true,
+        repeat: -1
+    });
+
+// monkey animation
+var monkey = new TimelineMax({repeat: -1});
+monkey
+.from("#monkey-full", 1, {
+        rotation: 2,
+        transformOrigin: "top center",
+        ease: Power0.easeNone
+    })
+    .to("#monkey-full", 1, {
+        rotation: 2,
+        transformOrigin: "top center",
+        ease: Power0.easeNone
+    });
+
+// monkey eye animation
+var monkey_eye = new TimelineMax({repeat: -1, repeatDelay: 3});
+monkey_eye
+.from(".monkey-eye", 0.5, {scaleY: 0, transformOrigin: "bottom center"});
+
+// color drops animation
+var color_drops = new TimelineMax({repeat: -1});
+color_drops
+.from(".color-drop-two", 1, {y: -25})
+.from(".color-drop-one", 1, {scaleY: 0, transformOrigin: "top center"}, 0.5);
+
+// water sprinkles animation
+var sprinkles = new TimelineMax({repeat: -1, repeatDelay: 1.5, ease: Power0.easeNone});
+sprinkles
+.from(".sprinkles-one", 0.3, {scaleX: 0, transformOrigin: "left center"}, 0.5)
+.from(".sprinkles-two", 0.3, {scaleX: 0, transformOrigin: "left center"}, "-=0.1")
+.from(".sprinkles-three", 0.3, {scaleX: 0, transformOrigin: "left center"}, "-=0.1");
+
+// fish animation
+
+var fish_speed = Math.floor((Math.random() * 10) + 5);
+
+var left_fish = new TimelineMax({repeat: -1});
+left_fish
+.from("#left-fish", fish_speed, {x: 125,})
+.to("#left-fish", fish_speed, {x: -25,})
+.to("#left-fish", 0.05, {scaleX: -1, transformOrigin: "center center"})
+.to("#left-fish", fish_speed, {x: 170})
+.to("#left-fish", 0.05, {scaleX: -1, transformOrigin: "center center"});
+
+var top_fish = new TimelineMax({repeat: -1});
+top_fish
+.from("#top-fish", fish_speed, {x: -125,})
+.to("#top-fish", 5, {x: 105,})
+.to("#top-fish", 0.01, {scaleX: -1, transformOrigin: "center center"})
+.to("#top-fish", fish_speed, {x: -120})
+.to("#top-fish", 0.01, {scaleX: -1, transformOrigin: "center center"});
+
+var right_fish = new TimelineMax({repeat: -1});
+right_fish
+.from("#right-fish", fish_speed, {x: 125,})
+.to("#right-fish", fish_speed, {x: -200,})
+.to("#right-fish", 0.01, {scaleX: -1, transformOrigin: "center center"})
+.to("#right-fish", fish_speed, {x: 120})
+.to("#right-fish", 0.01, {scaleX: -1, transformOrigin: "center center"});
+
+var bottom_fish = new TimelineMax({repeat: -1});
+bottom_fish
+.from("#bottom-fish", fish_speed, {x: -25,})
+.to("#bottom-fish", fish_speed, {x: 20,})
+.to("#bottom-fish", 0.01, {scaleX: -1, transformOrigin: "center center"})
+.to("#bottom-fish", fish_speed, {x: -20})
+.to("#bottom-fish", 0.01, {scaleX: -1, transformOrigin: "center center"});
+
+// water bubble animation
+var bubble_speed = Math.floor((Math.random() * 5) + 3);
+
+TweenMax.from(".water-bubble-two", Math.floor((Math.random() * 5) + 1), {opacity: 0, y: 25, scaleX: 0, scaleY: 0, transformOrigin: "center center", repeat: -1, repeatDelay: Math.floor((Math.random() * 5) +1)});
+TweenMax.from(".water-bubble-one", Math.floor((Math.random() * 5) + 1), {opacity: 0, y: 25, scaleX: 0, scaleY: 0, transformOrigin: "center center", repeat: -1, repeatDelay: Math.floor((Math.random() * 5) +1)});
+TweenMax.from(".water-bubble-three", Math.floor((Math.random() * 5) + 1), {opacity: 0, y: 25, scaleX: 0, scaleY: 0, transformOrigin: "center center", repeat: -1, repeatDelay: Math.floor((Math.random() * 5) +1)});
+TweenMax.from(".water-bubble-four", Math.floor((Math.random() * 5) + 1), {opacity: 0, y: 25, scaleX: 0, scaleY: 0, transformOrigin: "center center", repeat: -1, repeatDelay: Math.floor((Math.random() * 5) +1)});
+TweenMax.from(".water-bubble-five", Math.floor((Math.random() * 5) + 1), {opacity: 0, y: 25, scaleX: 0, scaleY: 0, transformOrigin: "center center", repeat: -1, repeatDelay: Math.floor((Math.random() * 5) +1)});
+TweenMax.from(".water-bubble-six", Math.floor((Math.random() * 5) + 1), {opacity: 0, y: 25, scaleX: 0, scaleY: 0, transformOrigin: "center center", repeat: -1, repeatDelay: Math.floor((Math.random() * 5) +1)});
+
+// bottom bee animation
+TweenMax.to(".bottom-bee-left-wing", 0.01, {
+        skewX: -25,
+        transformOrigin: "bottom center",
+        yoyo: true,
+        repeat: -1
+    });
+    TweenMax.to(".bottom-bee-right-wing", 0.01, {
+        skewX: 25,
+        transformOrigin: "bottom center",
+        yoyo: true,
+        repeat: -1
+    });
+
+// testimonial bee animation
+TweenMax.to(".testimonial-bee-left-wing", 0.01, {
+        skewX: -25,
+        transformOrigin: "bottom center",
+        yoyo: true,
+        repeat: -1
+    });
+    TweenMax.to(".testimonial-bee-right-wing", 0.01, {
+        skewX: 25,
+        transformOrigin: "bottom center",
+        yoyo: true,
+        repeat: -1
+    });
+
+// hello testing
+TweenMax.to(".hello", 1, {x: 25});
+
+
 
 
 

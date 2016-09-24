@@ -496,11 +496,11 @@ main #work #work-main .work-main-slide-buttons li {
   color: #FFFFFF;
 }
 main #work #work-main .work-main-slide-buttons li:nth-child(even) {
-  background: url('../images/work_button_shape_even.svg?1474191925') no-repeat;
+  background: url('../images/work_button_shape_even.svg?1474195989') no-repeat;
   margin-left: 15%;
 }
 main #work #work-main .work-main-slide-buttons li:nth-child(odd) {
-  background: url('../images/work_button_shape_odd.svg?1474191925') no-repeat;
+  background: url('../images/work_button_shape_odd.svg?1474195989') no-repeat;
 }
 main #work #work-main .work-main-slides {
   position: relative;
